@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Login Ekranı</h1>
+    <form method="POST" class="pure-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-default" type="submit">Giriş Yap</button>
+        <a class="btn btn-default" href="{% url 'register_view' %}" type="submit">Kayıt Ol</a>
+    </form>
+{% endblock %}
